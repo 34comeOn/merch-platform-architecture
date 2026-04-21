@@ -18,7 +18,7 @@
 3. **Matching Engine** — диспетчер заказов (модель Яндекс такси).
 
 ## ⚙️ 3. Высокоуровневая схема (HLD)
-## 🚀 Технологический стек:
+### 🚀 Технологический стек:
 * **Frontend**: React, Module Federation, Three.js/Fabric.js.
 * **Backend**: Node.js (Sharp), Go (Matching Service), Kafka.
 * **Infrastructure**: Yandex Cloud (S3, Managed Postgres, Redis).
@@ -27,8 +27,11 @@
 ## 🔄 4. Жизненный цикл данных (Data Flow)
 
 | **Тип данных** | **Хранилище** | **Политика (Lifecycle)** |
+| :--- | :---: | ---: |
 | **Print-ready** | PDF	Yandex S3 (Cold) | Удаление через 30 дней после заказа |
+| :--- | :---: | ---: |
 | **UI Previews** | Yandex S3 (Hot) | Кэширование через CDN |
+| :--- | :---: | ---: |
 | **Order Metadata** | PostgreSQL | Бессрочное хранение (Транзакции) |
 
 ## 🚕 5. Диспетчеризация (Matching & Dispatch)
